@@ -1,0 +1,23 @@
+        <div>
+            {{ form_start(form) }}
+            {{ form(form) }}
+            
+            {# {{ form_end(form) }} #}
+            <div class="form-group text-black">
+            {{ form_label(form.title, "Titre :")}} 
+            {{ form_widget(form.title, {'attr':{'class':'form-control'} })}}
+            </div>
+            <div class="form-group text-black">
+            {{ form_label(form.picture,"image :", {"label_attr":{"class":"text-black"}}) }}
+            {{ form_widget(form.picture,{"attr": {"class":"form-control"} } ) }}
+            </div>
+            <div class="form-group text-black">
+            {{ form_label(form.content, "Texte :") }}
+            {{ form_widget(form.content, {'attr':{'class':'form-control'} }) }}
+            </div>
+            <div class="form-group text-black">
+            {{ form_label(form.user, "Auteur :") }}
+            {{ form_widget(form.user, {'attr':{'class':'form-control'} }) }}
+            </div>
+            
+        </div>
