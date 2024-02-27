@@ -19,13 +19,13 @@ class ArticlesController extends AbstractController
     {
         $articles = $repo->findAll();
         return $this->render('articles/articles.html.twig', [
-            //'controller_name' => 'ArticlesController',
+            //'controller_name' => 'EventsController',
             "articles" => $articles,
         ]);
     }
 
     /**
-     * @Route("/article/{id}", name="app_articles")
+     * @Route("/article/{id}", name="app_article")
      */
     public function ficheArticle($id, ArticlesRepository  $repo): Response
     {
